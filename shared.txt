@@ -1,4 +1,4 @@
-Agent A says: added SSO integration on top of PKCE
+Agent A says: added biometric auth via WebAuthn
 Agent B says: added magic link passwordless login to signup
 Shared utility function refactored into async modular helpers
 Added rate limiting to all auth endpoints
