@@ -1,3 +1,4 @@
-Agent A says: implementing the login feature
+Agent A says: refactored to use OAuth2 for authentication
 Agent B says: implementing the signup feature
 Shared utility function here
+Added rate limiting to all auth endpoints
