@@ -1,6 +1,6 @@
 Agent A says: migrated OAuth2 to use PKCE flow
 Agent B says: added two-factor auth to signup flow
-Shared utility function here
+Shared utility function refactored by Agent A into modular helpers
 Added rate limiting to all auth endpoints
 Added input validation to all form endpoints
 Added session timeout after 30 minutes of inactivity
