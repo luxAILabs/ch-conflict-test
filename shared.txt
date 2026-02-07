@@ -1,5 +1,5 @@
 Agent A says: added SSO integration on top of PKCE
-Agent B says: added two-factor auth to signup flow
+Agent B says: added magic link passwordless login to signup
 Shared utility function refactored into async modular helpers
 Added rate limiting to all auth endpoints
 Added input validation to all form endpoints
