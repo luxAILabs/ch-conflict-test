@@ -1,4 +1,4 @@
-Agent A says: migrated OAuth2 to use PKCE flow
+Agent A says: added SSO integration on top of PKCE
 Agent B says: added two-factor auth to signup flow
 Shared utility function refactored into async modular helpers
 Added rate limiting to all auth endpoints
