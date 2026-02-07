@@ -1,6 +1,6 @@
-Agent A says: added biometric auth via WebAuthn
+Agent A says: replaced WebAuthn with passkey support
 Agent B says: added magic link passwordless login to signup
-Shared utility function refactored into async modular helpers
+Shared utility rewritten to use streaming pipelines
 Added rate limiting to all auth endpoints
 Added input validation to all form endpoints
 Added session timeout after 30 minutes of inactivity
