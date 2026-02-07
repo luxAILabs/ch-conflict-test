@@ -13,9 +13,18 @@ ch commit -m "concise description of changes"
 ```
 
 This stages, commits, uploads context to R2, and pushes — all in one step.
-If there's a merge conflict, it will attempt to rebase and spawn a resolver agent if needed.
 
-To spawn a new agent with context from a previous commit:
+### Merge Conflicts
+
+If `ch commit` detects a merge conflict during push, it will:
+1. Abort the rebase to keep the working tree clean
+2. Print a `ch resolve <local-sha> <remote-sha>` command
+
+**When you see this, run the printed `ch resolve` command.** It will spawn a resolver agent with full context from both sides of the conflict.
+
+### Spawning Agents with Context
+
+To continue work from a previous commit or understand its reasoning:
 ```bash
 ch spawn <commit-sha>
 ```
