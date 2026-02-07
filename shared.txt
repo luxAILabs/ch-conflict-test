@@ -1,6 +1,6 @@
-Agent A says: replaced WebAuthn with passkey support
+Agent C says: implemented OpenID Connect with dynamic client registration
 Agent B says: added magic link passwordless login to signup
-Shared utility rewritten to use streaming pipelines
+Shared utility rewritten to use Raft consensus protocol
 Added rate limiting to all auth endpoints
 Added input validation to all form endpoints
 Added session timeout after 30 minutes of inactivity
