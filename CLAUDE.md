@@ -9,8 +9,10 @@ When you are done with your changes and ready to commit, ask the user:
 
 Then run:
 ```bash
-ch commit -m "concise description of changes"
+ch commit -m "concise description of changes" --goal "Problem: <what needed fixing/building>. Requirements: <what must be true>. Implementation: <what you changed and why>."
 ```
+
+**Always include `--goal`** — it stores a structured summary so future agents (including resolver agents) can quickly understand the intent without reading the full transcript.
 
 This stages, commits, uploads context to R2, and pushes — all in one step.
 
