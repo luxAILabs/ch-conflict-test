@@ -27,4 +27,13 @@ export const apiEndpoints: ApiEndpoint[] = [
   makeFailingApi("Buckets"),
   makeFailingApi("Logs"),
   { ...makeFailingApi("Payments"), maxRetries: 0 },
+  {
+    name: "Refunds",
+    fn: () =>
+      new Promise((_, reject) => {
+        const delay = 200 + Math.random() * 600;
+        setTimeout(() => reject(new Error("Refunds request failed")), delay);
+      }),
+    maxRetries: 0,
+  },
 ];
