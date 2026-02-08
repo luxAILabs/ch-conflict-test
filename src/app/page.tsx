@@ -44,6 +44,7 @@ export default function Home() {
               name={endpoint.name}
               apiFn={endpoint.fn}
               triggerKey={runAllKey}
+              maxRetries={endpoint.maxRetries}
             />
           ))}
         </div>

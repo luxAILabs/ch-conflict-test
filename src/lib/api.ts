@@ -1,6 +1,7 @@
 export interface ApiEndpoint {
   name: string;
   fn: () => Promise<void>;
+  maxRetries?: number;
 }
 
 function makeFailingApi(name: string): ApiEndpoint {
@@ -25,4 +26,5 @@ export const apiEndpoints: ApiEndpoint[] = [
   makeFailingApi("Storage"),
   makeFailingApi("Buckets"),
   makeFailingApi("Logs"),
+  { ...makeFailingApi("Payments"), maxRetries: 0 },
 ];

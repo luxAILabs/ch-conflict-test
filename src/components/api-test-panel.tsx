@@ -18,10 +18,11 @@ interface ApiTestPanelProps {
   name: string;
   apiFn: () => Promise<void>;
   triggerKey?: number;
+  maxRetries?: number;
 }
 
-export function ApiTestPanel({ name, apiFn, triggerKey = 0 }: ApiTestPanelProps) {
-  const { logs, isRunning, execute, clearLogs } = useRetry();
+export function ApiTestPanel({ name, apiFn, triggerKey = 0, maxRetries }: ApiTestPanelProps) {
+  const { logs, isRunning, execute, clearLogs } = useRetry({ maxRetries });
   const initialRef = useRef(true);
 
   useEffect(() => {
