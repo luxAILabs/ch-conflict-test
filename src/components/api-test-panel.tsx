@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useRetry, LogType } from "@/hooks/use-retry";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,10 +17,22 @@ const logColors: Record<LogType, string> = {
 interface ApiTestPanelProps {
   name: string;
   apiFn: () => Promise<void>;
+  triggerKey?: number;
 }
 
-export function ApiTestPanel({ name, apiFn }: ApiTestPanelProps) {
+export function ApiTestPanel({ name, apiFn, triggerKey = 0 }: ApiTestPanelProps) {
   const { logs, isRunning, execute, clearLogs } = useRetry();
+  const initialRef = useRef(true);
+
+  useEffect(() => {
+    if (initialRef.current) {
+      initialRef.current = false;
+      return;
+    }
+    if (triggerKey > 0) {
+      execute(name, apiFn);
+    }
+  }, [triggerKey, name, apiFn, execute]);
 
   const status = isRunning ? "Retrying..." : logs.some((l) => l.type === "error") ? "Failed" : "Idle";
 
