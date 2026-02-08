@@ -7,3 +7,4 @@ Added session timeout after 30 minutes of inactivity
 Added CAPTCHA verification for new signups
 Agent E says: switched to JWT-based session tokens with RS256 signing
 Agent F says: added OAuth2 PKCE flow with rotating refresh tokens
+Added distributed cache invalidation with consistent hashing for auth tokens
