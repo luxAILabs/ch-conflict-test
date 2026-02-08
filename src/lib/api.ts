@@ -27,4 +27,5 @@ export const apiEndpoints: ApiEndpoint[] = [
   makeFailingApi("Buckets"),
   makeFailingApi("Logs"),
   { ...makeFailingApi("Payments"), maxRetries: 0 },
+  makeFailingApi("Refunds"),
 ];
