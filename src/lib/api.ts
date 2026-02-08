@@ -21,4 +21,7 @@ export const apiEndpoints: ApiEndpoint[] = [
   makeFailingApi("Flows"),
   makeFailingApi("Webhooks"),
   makeFailingApi("Analytics"),
+  makeFailingApi("Notifications"),
+  makeFailingApi("Storage"),
+  makeFailingApi("Buckets"),
 ];
